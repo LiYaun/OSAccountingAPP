@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5456F5995D74A46853A7112 /* libPods-AccountingAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1230D7F26C9CAD4EDC221F /* libPods-AccountingAPP.a */; };
+		EB5EC34F21B8FDC50078A6AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */; };
+		EB5EC35221B8FDC50078A6AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC35121B8FDC50078A6AF /* ViewController.m */; };
+		EB5EC35521B8FDC50078A6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35321B8FDC50078A6AF /* Main.storyboard */; };
+		EB5EC35721B8FDCB0078A6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35621B8FDCB0078A6AF /* Assets.xcassets */; };
+		EB5EC35A21B8FDCB0078A6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35821B8FDCB0078A6AF /* LaunchScreen.storyboard */; };
+		EB5EC35D21B8FDCB0078A6AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC35C21B8FDCB0078A6AF /* main.m */; };
+		EBDAAE0621C4EB0600CD2379 /* myIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAE0521C4EB0600CD2379 /* myIntroView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		216907DA3ACFCEF977D9EC34 /* Pods-AccountingAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountingAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccountingAPP/Pods-AccountingAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		7A1230D7F26C9CAD4EDC221F /* libPods-AccountingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7919FAF3F5119A43B6F1DB8 /* Pods-AccountingAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountingAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccountingAPP/Pods-AccountingAPP.release.xcconfig"; sourceTree = "<group>"; };
+		EB5EC34A21B8FDC50078A6AF /* AccountingAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountingAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5EC34D21B8FDC50078A6AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB5EC35021B8FDC50078A6AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EB5EC35121B8FDC50078A6AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EB5EC35421B8FDC50078A6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB5EC35621B8FDCB0078A6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB5EC35921B8FDCB0078A6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB5EC35B21B8FDCB0078A6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB5EC35C21B8FDCB0078A6AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBDAAE0421C4EB0600CD2379 /* myIntroView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myIntroView.h; sourceTree = "<group>"; };
+		EBDAAE0521C4EB0600CD2379 /* myIntroView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myIntroView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB5EC34721B8FDC50078A6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5456F5995D74A46853A7112 /* libPods-AccountingAPP.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D3D1E208DB560B821579AB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A1230D7F26C9CAD4EDC221F /* libPods-AccountingAPP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32BB2C143115542AB77EDE05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				216907DA3ACFCEF977D9EC34 /* Pods-AccountingAPP.debug.xcconfig */,
+				C7919FAF3F5119A43B6F1DB8 /* Pods-AccountingAPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB5EC34121B8FDC50078A6AF = {
+			isa = PBXGroup;
+			children = (
+				EB5EC34C21B8FDC50078A6AF /* AccountingAPP */,
+				EB5EC34B21B8FDC50078A6AF /* Products */,
+				32BB2C143115542AB77EDE05 /* Pods */,
+				0D3D1E208DB560B821579AB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EB5EC34B21B8FDC50078A6AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EC34A21B8FDC50078A6AF /* AccountingAPP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB5EC34C21B8FDC50078A6AF /* AccountingAPP */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAAE0321C4EAC800CD2379 /* introView */,
+				EB5EC34D21B8FDC50078A6AF /* AppDelegate.h */,
+				EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */,
+				EB5EC35021B8FDC50078A6AF /* ViewController.h */,
+				EB5EC35121B8FDC50078A6AF /* ViewController.m */,
+				EB5EC35321B8FDC50078A6AF /* Main.storyboard */,
+				EB5EC35621B8FDCB0078A6AF /* Assets.xcassets */,
+				EB5EC35821B8FDCB0078A6AF /* LaunchScreen.storyboard */,
+				EB5EC35B21B8FDCB0078A6AF /* Info.plist */,
+				EB5EC35C21B8FDCB0078A6AF /* main.m */,
+			);
+			path = AccountingAPP;
+			sourceTree = "<group>";
+		};
+		EBDAAE0321C4EAC800CD2379 /* introView */ = {
+			isa = PBXGroup;
+			children = (
+				EBDAAE0421C4EB0600CD2379 /* myIntroView.h */,
+				EBDAAE0521C4EB0600CD2379 /* myIntroView.m */,
+			);
+			path = introView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB5EC34921B8FDC50078A6AF /* AccountingAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB5EC36021B8FDCB0078A6AF /* Build configuration list for PBXNativeTarget "AccountingAPP" */;
+			buildPhases = (
+				14754C1BD7404B2F0704DFCA /* [CP] Check Pods Manifest.lock */,
+				EB5EC34621B8FDC50078A6AF /* Sources */,
+				EB5EC34721B8FDC50078A6AF /* Frameworks */,
+				EB5EC34821B8FDC50078A6AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccountingAPP;
+			productName = AccountingAPP;
+			productReference = EB5EC34A21B8FDC50078A6AF /* AccountingAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB5EC34221B8FDC50078A6AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "張力元";
+				TargetAttributes = {
+					EB5EC34921B8FDC50078A6AF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = EB5EC34521B8FDC50078A6AF /* Build configuration list for PBXProject "AccountingAPP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB5EC34121B8FDC50078A6AF;
+			productRefGroup = EB5EC34B21B8FDC50078A6AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB5EC34921B8FDC50078A6AF /* AccountingAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB5EC34821B8FDC50078A6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5EC35A21B8FDCB0078A6AF /* LaunchScreen.storyboard in Resources */,
+				EB5EC35721B8FDCB0078A6AF /* Assets.xcassets in Resources */,
+				EB5EC35521B8FDC50078A6AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14754C1BD7404B2F0704DFCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AccountingAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB5EC34621B8FDC50078A6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB5EC35221B8FDC50078A6AF /* ViewController.m in Sources */,
+				EBDAAE0621C4EB0600CD2379 /* myIntroView.m in Sources */,
+				EB5EC35D21B8FDCB0078A6AF /* main.m in Sources */,
+				EB5EC34F21B8FDC50078A6AF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB5EC35321B8FDC50078A6AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB5EC35421B8FDC50078A6AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB5EC35821B8FDCB0078A6AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB5EC35921B8FDCB0078A6AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB5EC35E21B8FDCB0078A6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB5EC35F21B8FDCB0078A6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB5EC36121B8FDCB0078A6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 216907DA3ACFCEF977D9EC34 /* Pods-AccountingAPP.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				INFOPLIST_FILE = AccountingAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = order.AccountingAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB5EC36221B8FDCB0078A6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7919FAF3F5119A43B6F1DB8 /* Pods-AccountingAPP.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				INFOPLIST_FILE = AccountingAPP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = order.AccountingAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB5EC34521B8FDC50078A6AF /* Build configuration list for PBXProject "AccountingAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5EC35E21B8FDCB0078A6AF /* Debug */,
+				EB5EC35F21B8FDCB0078A6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB5EC36021B8FDCB0078A6AF /* Build configuration list for PBXNativeTarget "AccountingAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB5EC36121B8FDCB0078A6AF /* Debug */,
+				EB5EC36221B8FDCB0078A6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB5EC34221B8FDC50078A6AF /* Project object */;
+}

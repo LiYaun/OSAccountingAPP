@@ -1,0 +1,42 @@
+PODS:
+  - EAIntroView (2.12.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
+  - JDStatusBarNotification (1.6.0)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - UICountingLabel (1.2.0)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - EAIntroView
+  - JDStatusBarNotification
+  - PNChart
+  - Realm
+  - YYText
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EAIntroView
+    - EARestrictedScrollView
+    - JDStatusBarNotification
+    - PNChart
+    - Realm
+    - UICountingLabel
+    - YYText
+
+SPEC CHECKSUMS:
+  EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  JDStatusBarNotification: 21b616e7432284fea6eb0ce9eadc37c8038a5544
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 043e6967cb8bd51c1c8ced9b395278010c9701b8
+
+COCOAPODS: 1.5.3

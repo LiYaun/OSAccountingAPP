@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EAIntroView.h>
 
 @interface ViewController : UIViewController
-
+@property (strong, nonatomic) EAIntroView *introView;
 
 @end
 

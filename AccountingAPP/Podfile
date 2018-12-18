@@ -11,4 +11,5 @@ target 'AccountingAPP' do
   pod 'JDStatusBarNotification'
   pod 'EAIntroView'
   pod 'Realm'
+  pod 'Toast', '~> 4.0.0'
 end

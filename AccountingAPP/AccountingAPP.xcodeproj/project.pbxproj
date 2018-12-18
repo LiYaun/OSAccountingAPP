@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E5456F5995D74A46853A7112 /* libPods-AccountingAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1230D7F26C9CAD4EDC221F /* libPods-AccountingAPP.a */; };
+		EB5964AD21C8965300003DED /* NewRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5964AB21C8965300003DED /* NewRecordViewController.m */; };
+		EB5964AE21C8965300003DED /* NewRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5964AC21C8965300003DED /* NewRecordViewController.xib */; };
+		EB5964B221C8C47F00003DED /* DateTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5964B121C8C47F00003DED /* DateTimeManager.m */; };
+		EB5E7F5921C780E600CC2642 /* AccountHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5E7F5821C780E600CC2642 /* AccountHomeViewController.m */; };
 		EB5EC34F21B8FDC50078A6AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */; };
 		EB5EC35221B8FDC50078A6AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC35121B8FDC50078A6AF /* ViewController.m */; };
 		EB5EC35521B8FDC50078A6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35321B8FDC50078A6AF /* Main.storyboard */; };
 		EB5EC35721B8FDCB0078A6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35621B8FDCB0078A6AF /* Assets.xcassets */; };
 		EB5EC35A21B8FDCB0078A6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5EC35821B8FDCB0078A6AF /* LaunchScreen.storyboard */; };
 		EB5EC35D21B8FDCB0078A6AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EC35C21B8FDCB0078A6AF /* main.m */; };
+		EB87741E21C78647002F90C7 /* MounthRecrodViewContrloller.m in Sources */ = {isa = PBXBuildFile; fileRef = EB87741D21C78647002F90C7 /* MounthRecrodViewContrloller.m */; };
+		EB87742321C792D9002F90C7 /* accountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB87742221C792D9002F90C7 /* accountModel.m */; };
+		EB9A9CA621C8F1AC001DCC08 /* StringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9A9CA521C8F1AC001DCC08 /* StringValue.m */; };
 		EBDAAE0621C4EB0600CD2379 /* myIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAE0521C4EB0600CD2379 /* myIntroView.m */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +28,13 @@
 		216907DA3ACFCEF977D9EC34 /* Pods-AccountingAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountingAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccountingAPP/Pods-AccountingAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		7A1230D7F26C9CAD4EDC221F /* libPods-AccountingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AccountingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7919FAF3F5119A43B6F1DB8 /* Pods-AccountingAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountingAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccountingAPP/Pods-AccountingAPP.release.xcconfig"; sourceTree = "<group>"; };
+		EB5964AA21C8965300003DED /* NewRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRecordViewController.h; sourceTree = "<group>"; };
+		EB5964AB21C8965300003DED /* NewRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRecordViewController.m; sourceTree = "<group>"; };
+		EB5964AC21C8965300003DED /* NewRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecordViewController.xib; sourceTree = "<group>"; };
+		EB5964B021C8C47F00003DED /* DateTimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTimeManager.h; sourceTree = "<group>"; };
+		EB5964B121C8C47F00003DED /* DateTimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTimeManager.m; sourceTree = "<group>"; };
+		EB5E7F5721C780E600CC2642 /* AccountHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountHomeViewController.h; sourceTree = "<group>"; };
+		EB5E7F5821C780E600CC2642 /* AccountHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountHomeViewController.m; sourceTree = "<group>"; };
 		EB5EC34A21B8FDC50078A6AF /* AccountingAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountingAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5EC34D21B8FDC50078A6AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +45,13 @@
 		EB5EC35921B8FDCB0078A6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB5EC35B21B8FDCB0078A6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5EC35C21B8FDCB0078A6AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB87741C21C78647002F90C7 /* MounthRecrodViewContrloller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MounthRecrodViewContrloller.h; sourceTree = "<group>"; };
+		EB87741D21C78647002F90C7 /* MounthRecrodViewContrloller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MounthRecrodViewContrloller.m; sourceTree = "<group>"; };
+		EB87742121C792D9002F90C7 /* accountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = accountModel.h; sourceTree = "<group>"; };
+		EB87742221C792D9002F90C7 /* accountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = accountModel.m; sourceTree = "<group>"; };
+		EB9A9CA421C8F1AC001DCC08 /* StringValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringValue.h; sourceTree = "<group>"; };
+		EB9A9CA521C8F1AC001DCC08 /* StringValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringValue.m; sourceTree = "<group>"; };
+		EB9A9CA921C8F6B6001DCC08 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		EBDAAE0421C4EB0600CD2379 /* myIntroView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myIntroView.h; sourceTree = "<group>"; };
 		EBDAAE0521C4EB0600CD2379 /* myIntroView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myIntroView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +85,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB5964A921C8961700003DED /* NewRecordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB5964AA21C8965300003DED /* NewRecordViewController.h */,
+				EB5964AB21C8965300003DED /* NewRecordViewController.m */,
+				EB5964AC21C8965300003DED /* NewRecordViewController.xib */,
+			);
+			path = NewRecordViewController;
+			sourceTree = "<group>";
+		};
+		EB5964AF21C8C46400003DED /* DateTimeManager */ = {
+			isa = PBXGroup;
+			children = (
+				EB5964B021C8C47F00003DED /* DateTimeManager.h */,
+				EB5964B121C8C47F00003DED /* DateTimeManager.m */,
+			);
+			path = DateTimeManager;
+			sourceTree = "<group>";
+		};
+		EB5E7F5621C780AA00CC2642 /* AccountHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB5E7F5721C780E600CC2642 /* AccountHomeViewController.h */,
+				EB5E7F5821C780E600CC2642 /* AccountHomeViewController.m */,
+			);
+			path = AccountHomeViewController;
+			sourceTree = "<group>";
+		};
 		EB5EC34121B8FDC50078A6AF = {
 			isa = PBXGroup;
 			children = (
 				EB5EC34C21B8FDC50078A6AF /* AccountingAPP */,
+				EB9A9CA721C8F1B1001DCC08 /* Support Files */,
 				EB5EC34B21B8FDC50078A6AF /* Products */,
 				32BB2C143115542AB77EDE05 /* Pods */,
 				0D3D1E208DB560B821579AB2 /* Frameworks */,
@@ -85,7 +135,13 @@
 		EB5EC34C21B8FDC50078A6AF /* AccountingAPP */ = {
 			isa = PBXGroup;
 			children = (
+				EB5EC35C21B8FDCB0078A6AF /* main.m */,
+				EB5964AF21C8C46400003DED /* DateTimeManager */,
 				EBDAAE0321C4EAC800CD2379 /* introView */,
+				EB87741F21C7929B002F90C7 /* realmModel */,
+				EB87741B21C78606002F90C7 /* MounthRecrodViewContrloller */,
+				EB5E7F5621C780AA00CC2642 /* AccountHomeViewController */,
+				EB5964A921C8961700003DED /* NewRecordViewController */,
 				EB5EC34D21B8FDC50078A6AF /* AppDelegate.h */,
 				EB5EC34E21B8FDC50078A6AF /* AppDelegate.m */,
 				EB5EC35021B8FDC50078A6AF /* ViewController.h */,
@@ -93,10 +149,45 @@
 				EB5EC35321B8FDC50078A6AF /* Main.storyboard */,
 				EB5EC35621B8FDCB0078A6AF /* Assets.xcassets */,
 				EB5EC35821B8FDCB0078A6AF /* LaunchScreen.storyboard */,
+				EB9A9CA921C8F6B6001DCC08 /* PrefixHeader.pch */,
+				EB9A9CA421C8F1AC001DCC08 /* StringValue.h */,
+				EB9A9CA521C8F1AC001DCC08 /* StringValue.m */,
 				EB5EC35B21B8FDCB0078A6AF /* Info.plist */,
-				EB5EC35C21B8FDCB0078A6AF /* main.m */,
 			);
 			path = AccountingAPP;
+			sourceTree = "<group>";
+		};
+		EB87741B21C78606002F90C7 /* MounthRecrodViewContrloller */ = {
+			isa = PBXGroup;
+			children = (
+				EB87741C21C78647002F90C7 /* MounthRecrodViewContrloller.h */,
+				EB87741D21C78647002F90C7 /* MounthRecrodViewContrloller.m */,
+			);
+			path = MounthRecrodViewContrloller;
+			sourceTree = "<group>";
+		};
+		EB87741F21C7929B002F90C7 /* realmModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB87742021C792AC002F90C7 /* accountModel */,
+			);
+			path = realmModel;
+			sourceTree = "<group>";
+		};
+		EB87742021C792AC002F90C7 /* accountModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB87742121C792D9002F90C7 /* accountModel.h */,
+				EB87742221C792D9002F90C7 /* accountModel.m */,
+			);
+			path = accountModel;
+			sourceTree = "<group>";
+		};
+		EB9A9CA721C8F1B1001DCC08 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		EBDAAE0321C4EAC800CD2379 /* introView */ = {
@@ -166,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5964AE21C8965300003DED /* NewRecordViewController.xib in Resources */,
 				EB5EC35A21B8FDCB0078A6AF /* LaunchScreen.storyboard in Resources */,
 				EB5EC35721B8FDCB0078A6AF /* Assets.xcassets in Resources */,
 				EB5EC35521B8FDC50078A6AF /* Main.storyboard in Resources */,
@@ -201,9 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5EC35221B8FDC50078A6AF /* ViewController.m in Sources */,
+				EB5E7F5921C780E600CC2642 /* AccountHomeViewController.m in Sources */,
 				EBDAAE0621C4EB0600CD2379 /* myIntroView.m in Sources */,
+				EB5964B221C8C47F00003DED /* DateTimeManager.m in Sources */,
 				EB5EC35D21B8FDCB0078A6AF /* main.m in Sources */,
+				EB5964AD21C8965300003DED /* NewRecordViewController.m in Sources */,
+				EB87742321C792D9002F90C7 /* accountModel.m in Sources */,
 				EB5EC34F21B8FDC50078A6AF /* AppDelegate.m in Sources */,
+				EB9A9CA621C8F1AC001DCC08 /* StringValue.m in Sources */,
+				EB87741E21C78647002F90C7 /* MounthRecrodViewContrloller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +385,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 arm64e armv7";
 			};
 			name = Debug;
 		};
@@ -342,6 +441,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7";
 			};
 			name = Release;
 		};
@@ -353,15 +453,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = AccountingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = order.AccountingAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7";
 			};
 			name = Debug;
 		};
@@ -373,15 +476,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = AccountingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = order.AccountingAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7";
 			};
 			name = Release;
 		};

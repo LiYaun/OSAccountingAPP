@@ -117,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				EB5EC34C21B8FDC50078A6AF /* AccountingAPP */,
-				EB9A9CA721C8F1B1001DCC08 /* Support Files */,
 				EB5EC34B21B8FDC50078A6AF /* Products */,
 				32BB2C143115542AB77EDE05 /* Pods */,
 				0D3D1E208DB560B821579AB2 /* Frameworks */,
@@ -181,13 +180,6 @@
 				EB87742221C792D9002F90C7 /* accountModel.m */,
 			);
 			path = accountModel;
-			sourceTree = "<group>";
-		};
-		EB9A9CA721C8F1B1001DCC08 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		EBDAAE0321C4EAC800CD2379 /* introView */ = {
@@ -453,6 +445,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = AccountingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -476,6 +470,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ACX3M6X8Z7;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = AccountingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

@@ -7,7 +7,4 @@
 //
 
 #import <Foundation/Foundation.h>
-NSString *const TYPE[] = {
-    @"食物",@"飲料",@"交通",@"娛樂",@"購物",@"教育",@"醫療",@"其他",@"收入"
-};
 

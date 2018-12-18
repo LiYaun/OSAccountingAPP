@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSArray *typeArr = (NSArray *)[[NSUserDefaults standardUserDefaults] objectForKey:@"typeArr"];
+    if (!typeArr){
+        typeArr = [[NSArray alloc]initWithObjects:@"食物",@"飲料",@"交通",@"娛樂",@"購物",@"教育",@"醫療",@"其他",@"收入", nil];
+        [[NSUserDefaults standardUserDefaults] setObject:typeArr forKey:@"typeArr"];
+    }
     return YES;
 }
 

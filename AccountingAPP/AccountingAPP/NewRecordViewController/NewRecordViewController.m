@@ -18,11 +18,16 @@
 
 @property (strong, nonatomic) UIPickerView *picker;
 @property (strong, nonatomic) UIDatePicker *datePicker;
+@property (strong, nonatomic) NSArray *typeArr;
+//@property (strong, nonatomic) RLMRealm *realmDB;
 @end
+
 
 @implementation NewRecordViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _typeArr = (NSArray *)[[NSUserDefaults standardUserDefaults] objectForKey:@"typeArr"];
+    [self modelInit];
     [self viewInit];
     [self pickerInit];
     [self datePickerInit];
@@ -63,15 +68,31 @@
 
 - (void)viewInit{
     _dateField.text = [DateTimeManager NSDateToNSString:[NSDate date]];
-    _typeField.text = TYPE[0];
+    _typeField.text = _typeArr[0];
     _titleField.placeholder = _typeField.text;
     UITapGestureRecognizer *endEditTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(killKeyboard)];
     [self.view addGestureRecognizer:endEditTap];
 }
 
+- (void)modelInit{
+    _model = [accountModel new];
+    _model.date = [DateTimeManager NSDateToDouble:_datePicker.date];
+    NSArray *dateArr = [_dateField.text componentsSeparatedByString:@"/"];
+    _model.year = [dateArr[0] intValue];
+    _model.month = [dateArr[1] intValue];
+    _model.day = [dateArr[2] intValue];
+}
+
 #pragma mark - Function
 - (void)nextBtnClick{
     _model.refreshTime = [DateTimeManager NSDateToDouble:[NSDate date]];
+    _model.title = _titleField.text;
+    _model.price = [_costField.text intValue];
+    RLMRealm *realmDB = [RLMRealm defaultRealm];
+    [realmDB transactionWithBlock:^{
+        [realmDB addObject:self->_model];
+    }];
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 - (void)showExitAlert{
@@ -109,16 +130,17 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    return 9;
+    return _typeArr.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    return  TYPE[row];
+    return  _typeArr[row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    _typeField.text = TYPE[row];
+    _typeField.text = _typeArr[row];
+    _titleField.placeholder = _typeField.text;
 }
 
 @end

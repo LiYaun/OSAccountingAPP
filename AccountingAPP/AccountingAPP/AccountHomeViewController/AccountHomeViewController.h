@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AccountHomeViewController : UIViewController
-
+@property (strong, nonatomic) NSDate *nowDate;
 @end
 
 NS_ASSUME_NONNULL_END

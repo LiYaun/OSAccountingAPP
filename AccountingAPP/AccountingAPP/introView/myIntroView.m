@@ -43,9 +43,13 @@ static CGRect fullScreemFrame;
 
 + (EAIntroPage *)lastPage{
     UIView *viewForLastPage = [[UIView alloc] initWithFrame:fullScreemFrame];
-    UIButton *startBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, fullScreemFrame.size.height/2, fullScreemFrame.size.width, 30)];
+    UIButton *startBtn = [[UIButton alloc] initWithFrame:CGRectMake(fullScreemFrame.size.width*0.25, fullScreemFrame.size.height/2, fullScreemFrame.size.width*0.5, 30)];
     [startBtn setTitle:@"開始記帳吧！！！" forState:UIControlStateNormal];
     [startBtn addTarget:self action:@selector(startAccount) forControlEvents:UIControlEventTouchUpInside];
+    startBtn.layer.masksToBounds = true;
+    startBtn.layer.cornerRadius = 5;
+    startBtn.layer.borderWidth = 1;
+    startBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     [viewForLastPage addSubview:startBtn];
     EAIntroPage *lastPage = [EAIntroPage pageWithCustomView:viewForLastPage];
     lastPage.bgImage = [UIImage imageNamed:@"BG1"];

@@ -9,15 +9,18 @@
 #import "AccountHomeViewController.h"
 #import "ViewController.h"
 #import "NewRecordViewController.h"
+#import "AccountTableViewCell.h"
 
-@interface AccountHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface AccountHomeViewController ()<UITableViewDelegate, UITableViewDataSource, AccountTableViewCellDelegate, UIViewControllerPreviewingDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *listView;
 @property (strong, nonatomic) IBOutlet UITextField *dateField;
 @property (strong, nonatomic) IBOutlet UIButton *lastDayBtn;
 @property (strong, nonatomic) IBOutlet UIButton *nextDayBtn;
+@property (strong, nonatomic) IBOutlet UILabel *totalCostLable;
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
-@property (strong, nonatomic) NSDate *nowDate;
+
+@property (strong, nonatomic) RLMResults<accountModel *> *accountData;
 @end
 
 @implementation AccountHomeViewController
@@ -26,6 +29,11 @@
     [super viewDidLoad];
     [self datePickerInit];
     [self dateFieldInit];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self listDataInit];
 }
 
 #pragma mark - init
@@ -40,14 +48,30 @@
 }
 
 - (void)dateFieldInit{
-    _dateField.text = [DateTimeManager NSDateToNSString:[NSDate date]];
+    _dateField.text = @"今天";
     _dateField.inputAccessoryView = [self keyboardInputAccessoryView];
     _dateField.inputView = _datePicker;
+}
+
+- (void)listDataInit{
+    NSString *dateStr = [DateTimeManager NSDateToNSString:_nowDate];
+    NSArray *dateArr = [dateStr componentsSeparatedByString:@"/"];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"year = %d AND month = %d AND day = %d",[dateArr[0] intValue],[dateArr[1]intValue],[dateArr[2]intValue]];
+    _accountData = [[accountModel objectsWithPredicate:pred] sortedResultsUsingKeyPath:@"date" ascending:true];
+    int totalCost = 0;
+    for (int i=0; i<_accountData.count; i++) {
+        totalCost = totalCost + _accountData[i].price;
+    }
+    _totalCostLable.text = [NSString stringWithFormat:@"%d",totalCost];
+    [_listView reloadData];
+    [self dateReload];
 }
 
 #pragma mark - IBAction
 - (IBAction)addNewRecord:(UIButton *)sender {
     NewRecordViewController *tView = [NewRecordViewController new];
+    tView.nowDate = _nowDate;
+    tView.isEdit = true;
     [self.navigationController pushViewController:tView animated:true];
 }
 
@@ -60,39 +84,94 @@
 }
 
 - (IBAction)swichDay:(UIButton *)btn{
-    NSLog(@"%d",(int)btn.tag);
     if (btn.tag == 0) {
         _nowDate = [DateTimeManager NextDay:_nowDate isAdd:false];
-        _dateField.text = [DateTimeManager NSDateToNSString:_nowDate];
+        [self dateReload];
     }
     else if ([_dateField.text isEqualToString:@"今天"]){
         [self.view makeToast:@"未來的帳未來算"];
     }
     else if (btn.tag == 1){
         _nowDate = [DateTimeManager NextDay:_nowDate isAdd:true];
-        _dateField.text = [DateTimeManager NSDateToNSString:_nowDate];
+        [self dateReload];
     }
     _datePicker.date = _nowDate;
+    [self listDataInit];
 }
 
+#pragma mark - tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return _accountData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = @"test";
+    AccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AccountTableViewCell"];
+    if (!cell)
+    {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"AccountTableViewCell" owner:nil options:nil] objectAtIndex:0];
+    }
+    [cell setCellbyAccount:_accountData[indexPath.row]];
+    cell.delegate = self;
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {  //支持3D Touch
+        //系统所有cell可实现预览（peek）
+        [self registerForPreviewingWithDelegate:self sourceView:cell]; //注册cell
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
     
+    NewRecordViewController *tView = [NewRecordViewController new];
+    tView.model = _accountData[indexPath.row];
+    tView.isEdit = false;
+    [self.navigationController pushViewController:tView animated:true];
 }
 
+- (void)deleteAccount:(accountModel *)model{
+    
+    UIAlertController *aView = [UIAlertController alertControllerWithTitle:@"刪除紀錄" message:@"你確定要刪除嗎？" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *setAction = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        RLMRealm *db = [RLMRealm defaultRealm];
+        [db beginWriteTransaction];
+        [db deleteObject:model];
+        [db commitWriteTransaction];
+        [self listDataInit];
+    }];
+    
+    [aView addAction:cancel];
+    [aView addAction:setAction];
+    [self presentViewController:aView animated:true completion:nil];
+}
+
+#pragma mark - UIViewControllerPreviewingDelegate(3D touch)
+- (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location{
+    NewRecordViewController *tView = [NewRecordViewController new];
+    
+    //转化坐标
+    location = [_listView convertPoint:location fromView:[previewingContext sourceView]];
+    
+    //根据locaton获取位置
+    NSIndexPath *path = [_listView indexPathForRowAtPoint:location];
+    
+    //根据位置获取字典数据传传入控制器
+    tView.model = _accountData[path.row];
+    tView.isEdit = false;
+    
+    return tView;
+}
+
+- (void)previewingContext:(id <UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit{
+    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+}
+
+#pragma mark - function
 - (UIToolbar *)keyboardInputAccessoryView{
     
     UIToolbar *keyboardDoneButtonView = [[UIToolbar alloc] init];
@@ -110,9 +189,22 @@
 
 - (void)scrollDatePicker{
     if (_dateField.isFirstResponder){
-        _dateField.text = [DateTimeManager NSDateToNSString:_datePicker.date];
+        NSString *dateStr = [DateTimeManager NSDateToNSString:_datePicker.date];
+        if ([dateStr isEqualToString:[DateTimeManager NSDateToNSString:[NSDate date]]])
+            _dateField.text = @"今天";
+        else
+            _dateField.text = dateStr;
         _nowDate = _datePicker.date;
+        [self listDataInit];
     }
+}
+
+- (void)dateReload{
+    NSString *dateStr = [DateTimeManager NSDateToNSString:_nowDate];
+    if ([dateStr isEqualToString:[DateTimeManager NSDateToNSString:[NSDate date]]])
+        _dateField.text = @"今天";
+    else
+        _dateField.text = dateStr;
 }
 
 @end

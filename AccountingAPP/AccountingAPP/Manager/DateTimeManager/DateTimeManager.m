@@ -14,8 +14,6 @@
     [formatter setDateFormat:@"yyyy/MM/dd"];
     [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Taipei"]];
     NSString *dateStr = [formatter stringFromDate:date];
-    if ([dateStr isEqualToString:[formatter stringFromDate:[NSDate date]]])
-        return @"今天";
     return dateStr;
 }
 
@@ -41,5 +39,23 @@
     NSTimeInterval _interval = doubleTime/1000;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     return date;
+}
+
++ (int)getSumOfDaysInMonth:(NSString *)year month:(NSString *)month{
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"yyyy-MM"]; // 年-月
+    
+    NSString * dateStr = [NSString stringWithFormat:@"%@-%@",year,month];
+    
+    NSDate * date = [formatter dateFromString:dateStr];
+    
+    //
+    NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSRange range = [calendar rangeOfUnit:NSDayCalendarUnit
+                                   inUnit: NSMonthCalendarUnit
+                                  forDate:date];
+    return (int)range.length;
 }
 @end

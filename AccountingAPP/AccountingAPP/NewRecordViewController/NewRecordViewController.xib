@@ -58,6 +58,9 @@
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="startEdit:" destination="-1" eventType="editingDidBegin" id="LlU-VR-5es"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>

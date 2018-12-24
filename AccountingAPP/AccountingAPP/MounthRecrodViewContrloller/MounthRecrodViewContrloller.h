@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MounthRecrodViewContrloller : UIViewController
+@property (assign, nonatomic) int nowMonth;
+@property (assign, nonatomic) int nowYear;
 
+- (void)updateAccData;
+- (void)updateEarliestData;
 @end
 
 NS_ASSUME_NONNULL_END

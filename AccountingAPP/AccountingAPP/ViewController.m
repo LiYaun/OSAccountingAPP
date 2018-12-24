@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "myIntroView.h"
+#import "MounthRecrodViewContrloller.h"
 
 
 @interface ViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *accountHomeView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *resetDBBtn;
 
 @property (assign, nonatomic) int nowPage;
 @end
@@ -22,12 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSocialScrollview];
+    [self resetDBBtnInit];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setIntroView];
+    self.title = @"我的帳簿";
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
@@ -59,9 +63,25 @@
     
 }
 
+- (void)resetDBBtnInit{
+    UITapGestureRecognizer *pres = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(resetDB)];
+    pres.numberOfTapsRequired = 10;
+    [_resetDBBtn addGestureRecognizer:pres];
+}
+
 - (IBAction)swichPage:(UISegmentedControl *)sender {
     NSLog(@"%ld",(long)sender.selectedSegmentIndex);
     [self scrollToPage:(int)sender.selectedSegmentIndex];
+    if (sender.selectedSegmentIndex == 1) {
+        for (int i = 0; i<self.childViewControllers.count; i++) {
+            if ([self.childViewControllers[i] isKindOfClass:[MounthRecrodViewContrloller class]]) {
+                MounthRecrodViewContrloller *tView = (MounthRecrodViewContrloller *)self.childViewControllers[i];
+                [tView updateAccData];
+                [tView updateEarliestData];
+                break;
+            }
+        }
+    }
 }
 
 - (void)scrollToPage:(int)page{
@@ -71,8 +91,16 @@
         CGRect frame = CGRectMake(tableSize.width*page, 0, tableSize.width, tableSize.height);
         [_scrollView scrollRectToVisible:frame animated:YES];
         _nowPage = page;
+        [self.view endEditing:true];
     }
 }
 
+- (void)resetDB{
+    RLMRealm *db = [RLMRealm defaultRealm];
+    [db beginWriteTransaction];
+    [db deleteAllObjects];
+    [db commitWriteTransaction];
+    [self.view makeToast:@"清除資料庫成功"];
+}
 
 @end

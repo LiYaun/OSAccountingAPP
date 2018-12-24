@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDate *)NextDay:(NSDate *)date isAdd:(BOOL)isAdd;
 + (double)NSDateToDouble:(NSDate *)date;
 + (NSDate *)DoubleToNSDate:(double)doubleTime;
++ (int)getSumOfDaysInMonth:(NSString *)year month:(NSString *)month;
 @end
 
 NS_ASSUME_NONNULL_END

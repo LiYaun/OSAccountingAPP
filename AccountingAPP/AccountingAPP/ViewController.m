@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "myIntroView.h"
 #import "MounthRecrodViewContrloller.h"
+#import "AccountHomeViewController.h"
 
 
 @interface ViewController ()<UIScrollViewDelegate>
@@ -72,16 +73,6 @@
 - (IBAction)swichPage:(UISegmentedControl *)sender {
     NSLog(@"%ld",(long)sender.selectedSegmentIndex);
     [self scrollToPage:(int)sender.selectedSegmentIndex];
-    if (sender.selectedSegmentIndex == 1) {
-        for (int i = 0; i<self.childViewControllers.count; i++) {
-            if ([self.childViewControllers[i] isKindOfClass:[MounthRecrodViewContrloller class]]) {
-                MounthRecrodViewContrloller *tView = (MounthRecrodViewContrloller *)self.childViewControllers[i];
-                [tView updateAccData];
-                [tView updateEarliestData];
-                break;
-            }
-        }
-    }
 }
 
 - (void)scrollToPage:(int)page{
@@ -92,6 +83,30 @@
         [_scrollView scrollRectToVisible:frame animated:YES];
         _nowPage = page;
         [self.view endEditing:true];
+        
+        if (page == 1) {
+            for (int i = 0; i<self.childViewControllers.count; i++) {
+                if ([self.childViewControllers[i] isKindOfClass:[MounthRecrodViewContrloller class]]) {
+                    MounthRecrodViewContrloller *tView = (MounthRecrodViewContrloller *)self.childViewControllers[i];
+                    [tView updateAccData];
+                    [tView updateEarliestData];
+                    break;
+                }
+            }
+        }
+        else if (page == 0){
+            for (int i = 0; i<self.childViewControllers.count; i++) {
+                if ([self.childViewControllers[i] isKindOfClass:[AccountHomeViewController class]]) {
+                    AccountHomeViewController *tView = (AccountHomeViewController *)self.childViewControllers[i];
+                    [tView listDataInit];
+                    break;
+                }
+            }
+        }
+    }
+    
+    if (_pageSwich.selectedSegmentIndex != page) {
+        [_pageSwich setSelectedSegmentIndex:page];
     }
 }
 

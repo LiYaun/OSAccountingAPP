@@ -11,8 +11,6 @@
 		EB52105721CA22C00089B04D /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB52105521CA22C00089B04D /* AccountTableViewCell.m */; };
 		EB52105821CA22C00089B04D /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB52105621CA22C00089B04D /* AccountTableViewCell.xib */; };
 		EB52105D21CA2F270089B04D /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB52105C21CA2F270089B04D /* ImageManager.m */; };
-		EB57347721CB7F5C00F00E4D /* AccountDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57347521CB7F5C00F00E4D /* AccountDetailViewController.m */; };
-		EB57347821CB7F5C00F00E4D /* AccountDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB57347621CB7F5C00F00E4D /* AccountDetailViewController.xib */; };
 		EB5964AD21C8965300003DED /* NewRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5964AB21C8965300003DED /* NewRecordViewController.m */; };
 		EB5964AE21C8965300003DED /* NewRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5964AC21C8965300003DED /* NewRecordViewController.xib */; };
 		EB5964B221C8C47F00003DED /* DateTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5964B121C8C47F00003DED /* DateTimeManager.m */; };
@@ -26,6 +24,8 @@
 		EB87741E21C78647002F90C7 /* MounthRecrodViewContrloller.m in Sources */ = {isa = PBXBuildFile; fileRef = EB87741D21C78647002F90C7 /* MounthRecrodViewContrloller.m */; };
 		EB87742321C792D9002F90C7 /* accountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB87742221C792D9002F90C7 /* accountModel.m */; };
 		EB9A9CA621C8F1AC001DCC08 /* StringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9A9CA521C8F1AC001DCC08 /* StringValue.m */; };
+		EBD08C2421D12D7D003A1DB5 /* barPreviewingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD08C2221D12D7D003A1DB5 /* barPreviewingViewController.m */; };
+		EBD08C2521D12D7D003A1DB5 /* barPreviewingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBD08C2321D12D7D003A1DB5 /* barPreviewingViewController.xib */; };
 		EBDAAE0621C4EB0600CD2379 /* myIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDAAE0521C4EB0600CD2379 /* myIntroView.m */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +38,6 @@
 		EB52105621CA22C00089B04D /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		EB52105B21CA2F270089B04D /* ImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
 		EB52105C21CA2F270089B04D /* ImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
-		EB57347421CB7F5C00F00E4D /* AccountDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountDetailViewController.h; sourceTree = "<group>"; };
-		EB57347521CB7F5C00F00E4D /* AccountDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountDetailViewController.m; sourceTree = "<group>"; };
-		EB57347621CB7F5C00F00E4D /* AccountDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetailViewController.xib; sourceTree = "<group>"; };
 		EB5964AA21C8965300003DED /* NewRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRecordViewController.h; sourceTree = "<group>"; };
 		EB5964AB21C8965300003DED /* NewRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRecordViewController.m; sourceTree = "<group>"; };
 		EB5964AC21C8965300003DED /* NewRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecordViewController.xib; sourceTree = "<group>"; };
@@ -65,6 +62,9 @@
 		EB9A9CA421C8F1AC001DCC08 /* StringValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringValue.h; sourceTree = "<group>"; };
 		EB9A9CA521C8F1AC001DCC08 /* StringValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringValue.m; sourceTree = "<group>"; };
 		EB9A9CA921C8F6B6001DCC08 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		EBD08C2121D12D7D003A1DB5 /* barPreviewingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = barPreviewingViewController.h; sourceTree = "<group>"; };
+		EBD08C2221D12D7D003A1DB5 /* barPreviewingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = barPreviewingViewController.m; sourceTree = "<group>"; };
+		EBD08C2321D12D7D003A1DB5 /* barPreviewingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = barPreviewingViewController.xib; sourceTree = "<group>"; };
 		EBDAAE0421C4EB0600CD2379 /* myIntroView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myIntroView.h; sourceTree = "<group>"; };
 		EBDAAE0521C4EB0600CD2379 /* myIntroView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myIntroView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,16 +134,6 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		EB57347321CB7EFA00F00E4D /* AccountDetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EB57347421CB7F5C00F00E4D /* AccountDetailViewController.h */,
-				EB57347521CB7F5C00F00E4D /* AccountDetailViewController.m */,
-				EB57347621CB7F5C00F00E4D /* AccountDetailViewController.xib */,
-			);
-			path = AccountDetailViewController;
-			sourceTree = "<group>";
-		};
 		EB5964A921C8961700003DED /* NewRecordViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +188,6 @@
 				EBDAAE0321C4EAC800CD2379 /* introView */,
 				EB87741F21C7929B002F90C7 /* realmModel */,
 				EB52105221CA22790089B04D /* UITableViewCell */,
-				EB57347321CB7EFA00F00E4D /* AccountDetailViewController */,
 				EB5964A921C8961700003DED /* NewRecordViewController */,
 				EB87741B21C78606002F90C7 /* MounthRecrodViewContrloller */,
 				EB5E7F5621C780AA00CC2642 /* AccountHomeViewController */,
@@ -220,6 +209,7 @@
 		EB87741B21C78606002F90C7 /* MounthRecrodViewContrloller */ = {
 			isa = PBXGroup;
 			children = (
+				EBD08C2021D12D41003A1DB5 /* barPreviewingViewController */,
 				EB87741C21C78647002F90C7 /* MounthRecrodViewContrloller.h */,
 				EB87741D21C78647002F90C7 /* MounthRecrodViewContrloller.m */,
 			);
@@ -241,6 +231,16 @@
 				EB87742221C792D9002F90C7 /* accountModel.m */,
 			);
 			path = accountModel;
+			sourceTree = "<group>";
+		};
+		EBD08C2021D12D41003A1DB5 /* barPreviewingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBD08C2121D12D7D003A1DB5 /* barPreviewingViewController.h */,
+				EBD08C2221D12D7D003A1DB5 /* barPreviewingViewController.m */,
+				EBD08C2321D12D7D003A1DB5 /* barPreviewingViewController.xib */,
+			);
+			path = barPreviewingViewController;
 			sourceTree = "<group>";
 		};
 		EBDAAE0321C4EAC800CD2379 /* introView */ = {
@@ -311,11 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5964AE21C8965300003DED /* NewRecordViewController.xib in Resources */,
-				EB57347821CB7F5C00F00E4D /* AccountDetailViewController.xib in Resources */,
 				EB52105821CA22C00089B04D /* AccountTableViewCell.xib in Resources */,
 				EB5EC35A21B8FDCB0078A6AF /* LaunchScreen.storyboard in Resources */,
 				EB5EC35721B8FDCB0078A6AF /* Assets.xcassets in Resources */,
 				EB5EC35521B8FDC50078A6AF /* Main.storyboard in Resources */,
+				EBD08C2521D12D7D003A1DB5 /* barPreviewingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,10 +353,10 @@
 				EB52105D21CA2F270089B04D /* ImageManager.m in Sources */,
 				EB5964B221C8C47F00003DED /* DateTimeManager.m in Sources */,
 				EB5EC35D21B8FDCB0078A6AF /* main.m in Sources */,
-				EB57347721CB7F5C00F00E4D /* AccountDetailViewController.m in Sources */,
 				EB5964AD21C8965300003DED /* NewRecordViewController.m in Sources */,
 				EB52105721CA22C00089B04D /* AccountTableViewCell.m in Sources */,
 				EB87742321C792D9002F90C7 /* accountModel.m in Sources */,
+				EBD08C2421D12D7D003A1DB5 /* barPreviewingViewController.m in Sources */,
 				EB5EC34F21B8FDC50078A6AF /* AppDelegate.m in Sources */,
 				EB9A9CA621C8F1AC001DCC08 /* StringValue.m in Sources */,
 				EB87741E21C78647002F90C7 /* MounthRecrodViewContrloller.m in Sources */,

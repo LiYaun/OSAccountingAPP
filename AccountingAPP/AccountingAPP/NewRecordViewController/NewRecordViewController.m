@@ -31,7 +31,10 @@
     [super viewDidLoad];
     _typeArr = (NSArray *)[[NSUserDefaults standardUserDefaults] objectForKey:@"typeArr"];
     _isComeByEdit = !_isEdit;
+    
     _realmDB = [RLMRealm defaultRealm];
+    
+    
     if (!_nowDate)
         _nowDate = [NSDate date];
     [self viewInit];
@@ -144,12 +147,17 @@
         _isEdit = false;
         [self textFieldInit];
         [self navigationBtnInit];
+        
         [_realmDB commitWriteTransaction];
+        
+        
     }
     else{
+        
         [_realmDB transactionWithBlock:^{
             [self->_realmDB addObject:self->_model];
         }];
+        
         [self.navigationController popViewControllerAnimated:true];
     }
 }
@@ -171,7 +179,10 @@
     _isEdit = true;
     [self textFieldInit];
     [self navigationBtnInit];
+    
+    
     [_realmDB beginWriteTransaction];
+    
 }
 
 - (void)scrollDatePicker{

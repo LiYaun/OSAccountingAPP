@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *lastDayBtn;
 @property (strong, nonatomic) IBOutlet UIButton *nextDayBtn;
 @property (strong, nonatomic) IBOutlet UILabel *totalCostLable;
+@property (strong, nonatomic) IBOutlet UIButton *noRecordView;
 @property (strong, nonatomic) UIDatePicker *datePicker;
 
 
@@ -54,16 +55,24 @@
 }
 
 - (void)listDataInit{
+    
     NSString *dateStr = [DateTimeManager NSDateToNSString:_nowDate];
     NSArray *dateArr = [dateStr componentsSeparatedByString:@"/"];
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"year = %d AND month = %d AND day = %d",[dateArr[0] intValue],[dateArr[1]intValue],[dateArr[2]intValue]];
-    _accountData = [[accountModel objectsWithPredicate:pred] sortedResultsUsingKeyPath:@"date" ascending:true];
+    _accountData = [[accountModel objectsWithPredicate:pred] sortedResultsUsingKeyPath:@"refreshTime" ascending:true];
+    
+    
+    _listView.hidden = !(_accountData.count > 0);
+    _noRecordView.hidden = (_accountData.count > 0);
     int totalCost = 0;
     for (int i=0; i<_accountData.count; i++) {
         totalCost = totalCost + _accountData[i].price;
     }
     _totalCostLable.text = [NSString stringWithFormat:@"%d",totalCost];
-    [_listView reloadData];
+    if (_accountData.count > 0)
+        [_listView reloadData];
+    
+    
     [self dateReload];
 }
 

@@ -58,4 +58,26 @@
                                   forDate:date];
     return (int)range.length;
 }
+
++ (NSDate *)NSStringToDate:(NSString *)timeString type:(int)type{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"Asia/Taipei"];
+    [dateFormatter setTimeZone:zone];
+    NSDate *dateOutput;
+    switch (type)
+    {
+        case 0://只丟日期
+            timeString = [timeString stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
+            timeString = [timeString stringByAppendingString:@" 00:00"];
+            dateOutput = [dateFormatter dateFromString:timeString];
+            break;
+        default:
+            return nil;
+            break;
+    }
+    
+    return dateOutput;
+}
 @end

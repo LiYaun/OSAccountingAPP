@@ -11,6 +11,8 @@
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) EAIntroView *introView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *pageSwich;
 
+- (void)scrollToPage:(int)page;
 @end
 

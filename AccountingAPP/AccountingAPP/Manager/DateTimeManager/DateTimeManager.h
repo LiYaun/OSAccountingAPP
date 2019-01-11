@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (double)NSDateToDouble:(NSDate *)date;
 + (NSDate *)DoubleToNSDate:(double)doubleTime;
 + (int)getSumOfDaysInMonth:(NSString *)year month:(NSString *)month;
+//type:0 只有日期
++ (NSDate *)NSStringToDate:(NSString *)timeString type:(int)type;
 @end
 
 NS_ASSUME_NONNULL_END

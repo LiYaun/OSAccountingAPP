@@ -22,6 +22,16 @@
         typeArr = [[NSArray alloc]initWithObjects:@"食物",@"飲料",@"交通",@"娛樂",@"購物",@"教育",@"醫療",@"其他",@"收入", nil];
         [[NSUserDefaults standardUserDefaults] setObject:typeArr forKey:@"typeArr"];
     }
+    
+    NSMutableArray *typeColorArr = (NSMutableArray *)[[NSUserDefaults standardUserDefaults] objectForKey:@"typeColorArr"];
+    if (!typeColorArr){
+        typeColorArr = [[NSMutableArray alloc]initWithObjects:PNRed,PNGreen,PNBlue,PNBrown,PNDarkBlue,PNLightBlue,PNMauve,PNDeepGrey,PNTwitterColor, nil];
+        for (int i=0; i<typeColorArr.count; i++) {
+            NSData *colorData = [NSKeyedArchiver archivedDataWithRootObject:typeColorArr[i]];
+            typeColorArr[i] = colorData;
+        }
+        [[NSUserDefaults standardUserDefaults] setObject:typeColorArr forKey:@"typeColorArr"];
+    }
     return YES;
 }
 
